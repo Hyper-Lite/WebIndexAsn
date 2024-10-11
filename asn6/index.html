@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6 - HTML Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Assignment 6 - HTML Form</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label>Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="range">Select Range:</label>
+            <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+            <fieldset>
+                <legend>Select Gender:</legend>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </fieldset>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+            <label for="interest">Select Interest:</label>
+            <select id="interest" name="interest">
+                <option value="sports">Sports</option>
+                <option value="music">Music</option>
+                <option value="art">Art</option>
+            </select><br><br>
+
+            <label for="terms">Agree to Terms</label>
+            <input type="checkbox" id="terms" name="terms" required><br><br>
+
+            <input type="reset" value="Reset Form">
+            <input type="submit" value="Submit Form">
+        </fieldset>
+    </form>
+</body>
+</html>

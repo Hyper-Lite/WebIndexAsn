@@ -1,0 +1,42 @@
+/* Set the entire body as a grid container */
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+    grid-template-rows: auto auto auto; /* 3 rows */
+    gap: 10px; /* Optional: Adds space between grid items */
+    height: 100vh; /* Makes sure it fills the entire height of the viewport */
+}
+
+/* Style individual grid areas */
+header {
+    grid-column: 1 / span 3; /* Span across all 3 columns */
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    grid-column: 1 / 2; /* First column */
+    background-color: lightcoral;
+    padding: 20px;
+}
+
+main {
+    grid-column: 2 / 3; /* Second column */
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+aside {
+    grid-column: 3 / 4; /* Third column */
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+}
+
+footer {
+    grid-column: 1 / span 3; /* Span across all 3 columns */
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+ 
