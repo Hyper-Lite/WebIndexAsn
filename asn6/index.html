@@ -9,7 +9,7 @@
 <body>
     <h1>Assignment 6 - HTML Form</h1>
 
-    <form action="#" method="post">
+    <form id="myForm" action="#" method="post"> <!-- Add Form ID -->
         <fieldset>
             <legend>Personal Information</legend>
 
@@ -58,7 +58,46 @@
 
             <input type="reset" value="Reset Form">
             <input type="submit" value="Submit Form">
+            <button type="button" onclick="displayFormData()">Display Form Data</button> <!-- New Button -->
         </fieldset>
     </form>
+
+    <!-- New div to display form data -->
+    <div id="formDataDisplay"></div>
+
+    <script>
+        // JavaScript to display form data
+        function displayFormData() {
+            // Get form field values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const color = document.getElementById('color').value;
+            const file = document.getElementById('file').value;
+            const password = document.getElementById('password').value;
+            const range = document.getElementById('range').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const message = document.getElementById('message').value;
+            const interest = document.getElementById('interest').value;
+            const terms = document.getElementById('terms').checked ? "Agreed" : "Not Agreed";
+
+            // Display data in the div
+            const displayData = `
+                <h3>Form Data:</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Favorite Color:</strong> ${color}</p>
+                <p><strong>Uploaded File:</strong> ${file}</p>
+                <p><strong>Password:</strong> ${password}</p>
+                <p><strong>Range:</strong> ${range}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+                <p><strong>Message:</strong> ${message}</p>
+                <p><strong>Interest:</strong> ${interest}</p>
+                <p><strong>Terms & Conditions:</strong> ${terms}</p>
+            `;
+
+            // Output the data in the div
+            document.getElementById('formDataDisplay').innerHTML = displayData;
+        }
+    </script>
 </body>
 </html>
